@@ -7,7 +7,7 @@ class Quantity {
   converter = {
     teaspoon: 1,
     tablespoon: 3,
-    ounce: 6
+    ounce: 6,
   };
 
   equals(other) {
@@ -17,8 +17,11 @@ class Quantity {
     );
   }
 
-  convertTo(other) {
-    return new Quantity(6, "teaspoon")
+  convertTo(newUnit) {
+    return new Quantity(
+      (this.converter[this.unit] / this.converter[newUnit]) * this.amount,
+      newUnit
+    );
   }
 }
 

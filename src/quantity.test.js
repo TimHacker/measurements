@@ -50,10 +50,10 @@ test("Convert ounces to teaspoons", () => {
   );
 });
 
-test("Convert ounces to tablespoons", () => {
-  const ounces = new Quantity(1, "ounce");
+test("Convert 2 ounces to tablespoons", () => {
+  const ounces = new Quantity(2, "ounce");
 
-  expect(ounces.convertTo("tablespoon").equals(new Quantity(2, "tablespoon"))).toBe(
-    true
-  );
+  expect(
+    ounces.convertTo("tablespoon").equals(new Quantity(4, "tablespoon"))
+  ).toBe(true);
 });
