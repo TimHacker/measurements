@@ -1,0 +1,22 @@
+{
+  "name": "measurements",
+  "version": "1.0.0",
+  "description": "clean code workshop example",
+  "main": "src/teaspoon.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "25.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": [
+    "javascript",
+    "jest",
+    "test"
+  ]
+}
