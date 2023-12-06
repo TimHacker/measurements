@@ -28,14 +28,16 @@ test("3 teaspoons is equal to a tablespoon", () => {
   expect(threeTeaspoon.equals(oneTablespoon)).toBe(true);
 });
 
-test("Compare Quantities Of Different Units", () => {
+test("Compare Quantities Of Teaspoons with Tablespoons", () => {
   const sixTeaspoons = new Quantity(6, "teaspoon");
   const twoTablespoons = new Quantity(2, "tablespoon");
 
   expect(sixTeaspoons.equals(twoTablespoons)).toBe(true);
 });
 
-test("Compare Quantities Of Oz with Tablespoons", () => {
+test("Compare Quantities Of Ounces with Tablespoons", () => {
+
+  // Change unit from string. "primitive obsession"
   const ounces = new Quantity(1, "ounce");
   const tablespoons = new Quantity(2, "tablespoon");
 
@@ -57,3 +59,4 @@ test("Convert 2 ounces to tablespoons", () => {
     ounces.convertTo("tablespoon").equals(new Quantity(4, "tablespoon"))
   ).toBe(true);
 });
+
